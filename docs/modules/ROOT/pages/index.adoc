@@ -1,0 +1,27 @@
+= Quarkus Wicket
+
+include::./includes/attributes.adoc[]
+
+TIP: Describe what the extension does here.
+
+== Installation
+
+If you want to use this extension, you need to add the `io.quarkiverse.wicket:quarkus-wicket` extension first to your build file.
+
+For instance, with Maven, add the following dependency to your POM file:
+
+[source,xml,subs=attributes+]
+----
+<dependency>
+    <groupId>io.quarkiverse.wicket</groupId>
+    <artifactId>quarkus-wicket</artifactId>
+    <version>{project-version}</version>
+</dependency>
+----
+
+[[extension-configuration-reference]]
+== Extension Configuration Reference
+
+TIP: Remove this section if you don't have Quarkus configuration properties in your extension.
+
+include::includes/quarkus-wicket.adoc[leveloffset=+1, opts=optional]

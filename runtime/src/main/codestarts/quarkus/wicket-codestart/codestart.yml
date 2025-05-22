@@ -1,0 +1,9 @@
+name: wicket-codestart
+ref: wicket
+type: code
+tags: extension-codestart
+metadata:
+  title: Wicket
+  description: Provides integration between Apache Wicket and Quarkus and provides a quick start for using Wicket in a quarkus environment
+#  path: /some-path
+  related-guide-section: https://docs.quarkiverse.io/quarkus-wicket/dev/index.html
