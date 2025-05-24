@@ -1,6 +1,12 @@
 name: Wicket
 #description: Provides integration between Apache Wicket and Quarkus and provides a quick start for using Wicket in a quarkus environment
 metadata:
+  short-name: "wicket"
+  categories:
+    - "web"
+  keywords:
+    - "wicket"
+    - "apache wicket"
 #  keywords:
 #    - wicket
 #  guide: https://docs.quarkiverse.io/wicket/dev/ # To create and publish this guide, see https://github.com/quarkiverse/quarkiverse/wiki#documenting-your-extension
