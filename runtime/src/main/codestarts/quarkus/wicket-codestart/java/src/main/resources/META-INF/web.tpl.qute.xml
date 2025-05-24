@@ -10,15 +10,7 @@
 
     <filter>
         <filter-name>wicket.wicket-quarkus</filter-name>
-        <filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
-        <init-param>
-            <param-name>applicationClassName</param-name>
-            <param-value>{project.package-name}.MyApplication</param-value>
-        </init-param>
-        <init-param>
-            <param-name>filterMappingUrlPattern</param-name>
-            <param-value>/*</param-value>
-        </init-param>
+        <filter-class>io.quarkiverse.wicket.runtime.QuarkusWicketFilter</filter-class>
     </filter>
 
     <filter-mapping>
