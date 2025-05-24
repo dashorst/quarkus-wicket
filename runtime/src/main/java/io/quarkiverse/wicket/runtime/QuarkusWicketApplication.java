@@ -1,6 +1,7 @@
 package io.quarkiverse.wicket.runtime;
 
-import org.apache.wicket.Page;
+import jakarta.inject.Inject;
+
 import org.apache.wicket.RuntimeConfigurationType;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -8,13 +9,12 @@ import io.quarkiverse.wicket.runtime.arc.ArcInjector;
 import io.quarkiverse.wicket.runtime.config.WicketConfiguration;
 import io.quarkus.logging.Log;
 import io.quarkus.runtime.LaunchMode;
-import jakarta.inject.Inject;
 
 /**
  * Base class for Wicket applications in Quarkus.
- * 
+ *
  * Configures the CDI integration with ArC.
- * 
+ *
  * Integrates Wicket's development mode with Quarkus' development mode.
  */
 public abstract class QuarkusWicketApplication extends WebApplication {
@@ -23,8 +23,6 @@ public abstract class QuarkusWicketApplication extends WebApplication {
 
     @Inject
     WicketConfiguration config;
-
-    Class<? extends Page> homePage = null;
 
     public QuarkusWicketApplication() {
         Log.infof("QuarkusWicketApplication constructor");

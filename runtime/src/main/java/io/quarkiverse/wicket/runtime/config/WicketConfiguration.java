@@ -18,7 +18,7 @@ public interface WicketConfiguration {
 
     /**
      * The configuration for the {@link WicketFilter}
-     * 
+     *
      * @return the filter configuration
      */
     WicketFilterConfiguration filter();
