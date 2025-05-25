@@ -27,10 +27,6 @@
     </scm>
 
     <properties>
-        <compiler-plugin.version>3.14.0</compiler-plugin.version>
-        <maven.compiler.release>17</maven.compiler.release>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.version>3.23.0</quarkus.version>
         <wicket.version>10.5.0</wicket.version>
     </properties>
@@ -64,13 +60,6 @@
                     <groupId>io.quarkus</groupId>
                     <artifactId>quarkus-maven-plugin</artifactId>
                     <version>${quarkus.version}</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${compiler-plugin.version}</version>
-                    <configuration>
-                        <parameters>true</parameters>
-                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>io.quarkus</groupId>
