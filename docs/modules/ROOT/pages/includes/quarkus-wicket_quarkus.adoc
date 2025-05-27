@@ -7,47 +7,7 @@ h|[.header-title]##Configuration property##
 h|Type
 h|Default
 
-a|icon:lock[title=Fixed at build time] [[quarkus-wicket_quarkus-application-class-name]] [.property-path]##link:#quarkus-wicket_quarkus-application-class-name[`quarkus.application-class-name`]##
-ifdef::add-copy-button-to-config-props[]
-config_property_copy_button:+++quarkus.application-class-name+++[]
-endif::add-copy-button-to-config-props[]
-
-
-[.description]
---
-The name of the Wicket application class.
-
-
-ifdef::add-copy-button-to-env-var[]
-Environment variable: env_var_with_copy_button:+++QUARKUS_APPLICATION_CLASS_NAME+++[]
-endif::add-copy-button-to-env-var[]
-ifndef::add-copy-button-to-env-var[]
-Environment variable: `+++QUARKUS_APPLICATION_CLASS_NAME+++`
-endif::add-copy-button-to-env-var[]
---
-|string
-|`io.quarkiverse.wicket.runtime.QuarkusWicketApplication`
-
-a|icon:lock[title=Fixed at build time] [[quarkus-wicket_quarkus-filter-mapping]] [.property-path]##link:#quarkus-wicket_quarkus-filter-mapping[`quarkus.filter-mapping`]##
-ifdef::add-copy-button-to-config-props[]
-config_property_copy_button:+++quarkus.filter-mapping+++[]
-endif::add-copy-button-to-config-props[]
-
-
-[.description]
---
-The name of the Wicket filter mapping.
-
-
-ifdef::add-copy-button-to-env-var[]
-Environment variable: env_var_with_copy_button:+++QUARKUS_FILTER_MAPPING+++[]
-endif::add-copy-button-to-env-var[]
-ifndef::add-copy-button-to-env-var[]
-Environment variable: `+++QUARKUS_FILTER_MAPPING+++`
-endif::add-copy-button-to-env-var[]
---
-|string
-|`/*`
+3+|No configuration properties found.
 
 |===
 

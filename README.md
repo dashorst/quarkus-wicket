@@ -2,26 +2,36 @@
 
 [![Version](https://img.shields.io/maven-central/v/io.quarkiverse.wicket/quarkus-wicket?logo=apache-maven&style=flat-square)](https://central.sonatype.com/artifact/io.quarkiverse.wicket/quarkus-wicket-parent)
 
-## Welcome to Quarkiverse!
+## Welcome to Quarkus Wicket!
 
-Congratulations and thank you for creating a new Quarkus extension project in Quarkiverse!
+This is the Quarkus extension to build Quarkus web applications using [Apache Wicket](https://wicket.apache.org).
 
-Feel free to replace this content with the proper description of your new project and necessary instructions how to use and contribute to it.
+## Features
 
-You can find the basic info, Quarkiverse policies and conventions in [the Quarkiverse wiki](https://github.com/quarkiverse/quarkiverse/wiki).
+- Should be compatible with ArC CDI injection (aka CDI lite)
 
-In case you are creating a Quarkus extension project for the first time, please follow [Building My First Extension](https://quarkus.io/guides/building-my-first-extension) guide.
+- Injection of your CDI services works in Components, Behaviors and sessions
 
-Other useful articles related to Quarkus extension development can be found under the [Writing Extensions](https://quarkus.io/guides/#writing-extensions) guide category on the [Quarkus.io](https://quarkus.io) website.
+- Configures Wicket using the profiles of Quarkus (e.g. dev -> development configuration, prod -> deployment configuration)
 
-Thanks again, good luck and have fun!
+## Caveats
+
+- Your application should extend `QuarkusWicketApplication` to work (the codestart generates this for you)
+
+- Your application should be a `@Singleton` for proper injection into the WicketFilter to work
+
+- Apache Wicket doesn't work well (yet) with native GraalVM so this extension doesn't support native applications
+
+- Does not support build time processing (all CDI references are resolved at runtime)
+
+- Requires all CDI beans to be injectable (see build time processing) at runtime, this causes overhead
+
+- No attempts have been made to integrate Hibernate/Panache/... into this project, so expect difficulties
+
+- There are no configuration options available other than through coding them yourself in your application
+
 
 ## Documentation
 
-The documentation for this extension should be maintained as part of this repository and it is stored in the `docs/` directory.
+The documentation for this extension can be found at the [Quarkiverse Wicket](https://docs.quarkiverse.io/quarkus-wicket/dev/index.html) website.
 
-The layout should follow the [Antora's Standard File and Directory Set](https://docs.antora.org/antora/2.3/standard-directories/).
-
-Once the docs are ready to be published, please open a PR including this repository in the [Quarkiverse Docs Antora playbook](https://github.com/quarkiverse/quarkiverse-docs/blob/main/antora-playbook.yml#L7). See an example [here](https://github.com/quarkiverse/quarkiverse-docs/pull/1)
-
-Your documentation will then be published to the <https://docs.quarkiverse.io/> website.
