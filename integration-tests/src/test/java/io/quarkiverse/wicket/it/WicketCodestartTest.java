@@ -28,7 +28,7 @@ public class WicketCodestartTest {
     void testContent() throws Throwable {
         codestartTest.checkGeneratedSource("org.acme.MyPage");
         codestartTest.checkGeneratedSource("org.acme.MyApplication");
-        //codestartTest.assertThatGeneratedFileMatchSnapshot(Language.JAVA, "\"src/main/resources/some-resource.ext");
+        codestartTest.assertThatGeneratedFileMatchSnapshot(Language.JAVA, "src/main/resources/ilove/quark/us/MyPage.html");
     }
 
     /**
