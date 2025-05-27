@@ -2,7 +2,36 @@
 
 include::./includes/attributes.adoc[]
 
-TIP: Describe what the extension does here.
+This extension allows you to create https://wicket.apache.org[Apache Wicket] applications and run them using Quarkus.
+
+== Features
+
+- Should be compatible with ArC CDI injection (aka CDI lite)
+
+- Injection of your CDI services works in Components, Behaviors and sessions
+
+[source,java]
+----
+include::includes/MyPage.java[]
+----
+
+- Configures Wicket using the profiles of Quarkus (e.g. dev -> development configuration, prod -> deployment configuration)
+
+== Caveats
+
+- Your application should extend `QuarkusWicketApplication` to work (the codestart generates this for you)
+
+- Your application should be a `@Singleton` for proper injection into the WicketFilter to work
+
+- Apache Wicket doesn't work well (yet) with native GraalVM so this extension doesn't support native applications
+
+- Does not support build time processing (all CDI references are resolved at runtime)
+
+- Requires all CDI beans to be injectable (see build time processing) at runtime, this causes overhead
+
+- No attempts have been made to integrate Hibernate/Panache/... into this project, so expect difficulties
+
+- There are no configuration options available other than through coding them yourself in your application
 
 == Installation
 
@@ -19,9 +48,15 @@ For instance, with Maven, add the following dependency to your POM file:
 </dependency>
 ----
 
+If you don't use the codestart to generate a new application you need to create an Application class:
+
+[source,java]
+----
+include::includes/MyApplication.java[]
+----
+
+
 [[extension-configuration-reference]]
 == Extension Configuration Reference
-
-TIP: Remove this section if you don't have Quarkus configuration properties in your extension.
 
 include::includes/quarkus-wicket.adoc[leveloffset=+1, opts=optional]
