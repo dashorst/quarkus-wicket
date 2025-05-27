@@ -8,5 +8,6 @@ public class QuarkusWicketFilter extends WicketFilter {
     @Inject
     public QuarkusWicketFilter(QuarkusWicketApplication application) {
         super(application);
+        setFilterPath("/*");
     }
 }
