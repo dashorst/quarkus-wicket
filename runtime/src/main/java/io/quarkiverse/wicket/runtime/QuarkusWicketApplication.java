@@ -7,7 +7,6 @@ import org.apache.wicket.protocol.http.WebApplication;
 
 import io.quarkiverse.wicket.runtime.arc.ArcInjector;
 import io.quarkiverse.wicket.runtime.config.WicketConfiguration;
-import io.quarkus.logging.Log;
 import io.quarkus.runtime.LaunchMode;
 
 /**
@@ -25,8 +24,6 @@ public abstract class QuarkusWicketApplication extends WebApplication {
     WicketConfiguration config;
 
     public QuarkusWicketApplication() {
-        Log.infof("QuarkusWicketApplication constructor");
-
         // Setup the Wicket runtime behavior based on the configuration of Quarkus'
         // launch mode.
         setConfigurationType(switch (LaunchMode.current()) {
@@ -37,7 +34,6 @@ public abstract class QuarkusWicketApplication extends WebApplication {
 
     @Override
     protected void init() {
-
         // Setup the ArC CDI configuration
         injector.bind(this);
 
