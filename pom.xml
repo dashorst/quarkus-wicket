@@ -27,7 +27,7 @@
     </scm>
 
     <properties>
-        <quarkus.version>3.23.3</quarkus.version>
+        <quarkus.version>3.24.2</quarkus.version>
         <wicket.version>10.5.0</wicket.version>
     </properties>
 
