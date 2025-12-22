@@ -28,7 +28,7 @@
 
     <properties>
         <quarkus.version>3.23.3</quarkus.version>
-        <wicket.version>10.5.0</wicket.version>
+        <wicket.version>10.8.0</wicket.version>
     </properties>
 
     <dependencyManagement>
